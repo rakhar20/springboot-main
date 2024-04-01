@@ -14,7 +14,4 @@ public class helloContainer {
 		object.put("email", "prakharjoshi25@gmail.com");
 		return object;
 	}
-	public String index() {
-		return "First Spring Boot Project!";
-	}
 }
