@@ -30,12 +30,23 @@
 	</dependencies>
 
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
-
+	  <plugins>
+	      <plugin>
+		  <groupId>com.spotify</groupId>
+		  <artifactId>dockerfile-maven-plugin</artifactId>
+		  <version>1.4.9</version>
+		  <executions>
+		      <execution>
+			  <id>default</id>
+			  <goals>
+			      <goal>build</goal>
+			  </goals>
+		      </execution>
+		  </executions>
+		  <configuration>
+		      <!-- Configure plugin here -->
+		  </configuration>
+	      </plugin>
+	  </plugins>
+        </build>
 </project>
