@@ -1,13 +1,5 @@
-FROM openjdk:11-jre-slim
-
-# Set the working directory in the container
+FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
-
-# Copy the packaged JAR file into the container
-COPY target/demo-0.0.1-SNAPSHOT.jar /app/app.jar
-
-# Expose the port that the Spring Boot application will run on
+COPY target/demo-0.0.1-SNAPSHOT.jar demo-0.0.1-SNAPSHOT.jar
 EXPOSE 8080
-
-# Command to run the Spring Boot application when the container starts
-CMD ["java", "-jar", "app.jar"]
+CMD ["java","-jar","demo-0.0.1-SNAPSHOT.jar"]
